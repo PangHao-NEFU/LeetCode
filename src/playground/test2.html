@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        background-color: #fff;
+        height: 100vh;
+        display: flex;
+        flex-flow: row nowrap;
+      }
+      .left{
+        flex: 0 0 200px;
+        width: 500px;
+        background-color: blue;
+      }
+      .main{
+        flex:1 1 auto;
+      }
+      .right{
+        flex:0 0 300px;
+        background-color: red;
+      }
+      .chat-content{
+        background-color: blueviolet;
+        border-radius: 20px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      
+      <div class="left">left</div>
+      <div class="main"></div>
+      <div class="right">right</div>
+    </div>
+    <div class="container" style="flex-direction: row-reverse;height: auto;">
+      <div class="chat-content">
+        向右显示
+      </div>
+
+    </div>
+  </body>
+</html>

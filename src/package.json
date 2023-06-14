@@ -1,0 +1,7 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "dependencies": {
+    "node-stdio": "^0.1.6"
+  }
+}
