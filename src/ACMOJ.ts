@@ -1,5 +1,3 @@
-import { type } from "os";
-
 /*ACM模式处理树的输入输出,树的输入如果是以数组的方式
 构建树很少见,一般是以邻接表方式给出树的结构
 rl.on("line", function (line: any) {
@@ -19,7 +17,7 @@ rl.on("close", () => {
 // console.log('请输入:')
 // let arr=<any>[]
 // rl.on("line", (line: string) => {
-  
+
 //   arr.push(line)
 //   console.log(typeof line)
 // });
@@ -73,18 +71,17 @@ rl.on("close", () => {
 //   return root;
 // }
 
-
-function isMountain(arr:Array<any>) {
-  const n = arr.length
-  let i = 0;
-  while (i + 1 < n && arr[i] < arr[i + 1]) {
-    i++
-  }
-  if (i === 0 || i === n - 1) return false;
-  while (i + 1 < n && arr[i] > arr[i + 1]) {
-    i++
-  }
-  return i===n-1
+function isMountain(arr: Array<any>) {
+	const n = arr.length;
+	let i = 0;
+	while (i + 1 < n && arr[i] < arr[i + 1]) {
+		i++;
+	}
+	if (i === 0 || i === n - 1) return false;
+	while (i + 1 < n && arr[i] > arr[i + 1]) {
+		i++;
+	}
+	return i === n - 1;
 }
 
 function findShortestCombination(arr, num) {
@@ -130,8 +127,8 @@ function findArray(arr, num) {
 		for (let j = 1; j <= num; j++) {
 			dp[j] = Math.min(dp[j], dp[j - arr[i]] + 1);
 		}
-  }
-  console.log(dp)
+	}
+	console.log(dp);
 	if (dp[num] === Infinity) {
 		return result;
 	}
@@ -144,6 +141,6 @@ function findArray(arr, num) {
 	}
 	return result;
 }
-let arr = [1, 4, 2, 4, 5, 6, 3, 1, 2]
-let i=findArray(arr, 10)
-console.log(i)
+let arr = [1, 4, 2, 4, 5, 6, 3, 1, 2];
+let i = findArray(arr, 10);
+console.log(i);
